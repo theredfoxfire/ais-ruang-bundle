@@ -1,0 +1,18 @@
+Ais\RuangBundle\Entity\Ruang:
+ type: entity
+ table: ruang
+ id:
+  id: 
+   type: integer
+   generator: { strategy: AUTO }
+ fields:
+  gedung_id:
+   type: integer
+  nama:
+   type: string
+  is_active:
+   type: boolean
+   nullable: true
+  is_delete:
+   type: boolean
+   nullable: true

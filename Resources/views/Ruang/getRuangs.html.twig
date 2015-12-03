@@ -1,0 +1,18 @@
+{% block content %}
+    <h1 class="title">{{ 'ruang.list'|trans({}, 'AisRuangBundle') }}</h1>
+
+    <ul id="ruang-list">
+        {% for ruang in ruangs %}
+            <li>
+                <a href="{{ path('api_1_get_ruang', {'id': ruang.id}) }}">{{ ruang.nama }}</a>
+                {#[<a href="{{ path('api_1_edit_ruangs', {'id': ruang.id}) }}">{{ 'ruang.edit.link'|trans({}, 'AisRuangBundle') }}</a>]#}
+                {#[<a href="{{ path('api_1_remove_ruangs', {'id': ruang.id}) }}">{{ 'ruang.remove.link'|trans({}, 'AisRuangBundle') }}</a>]#}
+            </li>
+        {% else %}
+            <li>{{ 'ruang.list.empty'|trans({}, 'AisRuangBundle') }}</li>
+        {% endfor %}
+    </ul>
+    <p>
+        <a href="{{ path('api_1_new_ruang') }}">{{ 'ruang.new.link'|trans({}, 'AisRuangBundle') }}</a>
+    </p>
+{% endblock %}
