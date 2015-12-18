@@ -1,6 +1,7 @@
 Ais\RuangBundle\Entity\Ruang:
  type: entity
  table: ruang
+ repositoryClass: Ais\RuangBundle\Repository\RuangRepository
  id:
   id: 
    type: integer

@@ -16,6 +16,15 @@
             <argument>%ais_ruang.ruang.class%</argument>
             <argument type="service" id="form.factory"></argument>
         </service>
+        <service id="ais_ruang.ruang.manager" class="Doctrine\ORM\EntityManager" factory-service="doctrine" factory-method="getManagerForClass">
+			<argument>%ais_ruang.ruang.class%</argument>
+		</service>
+        
+        <service id="ais_ruang.ruang.repository" 
+			class="Ais\RuangBundle\Repository\RuangRepository"
+			factory-service="ais_ruang.ruang.manager" factory-method="getRepository">
+				<argument>%ais_ruang.ruang.class%</argument>
+		</service>
     </services>
 
 </container>

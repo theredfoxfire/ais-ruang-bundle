@@ -142,4 +142,3 @@ class Ruang implements RuangInterface
         return $this->is_delete;
     }
 }
-
